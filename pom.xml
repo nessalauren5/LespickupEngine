@@ -83,6 +83,13 @@
                 <groupId>com.google.appengine</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
                 <version>1.9.63</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>appengine:devserver</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
