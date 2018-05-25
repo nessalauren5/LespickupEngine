@@ -94,12 +94,6 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <webResources>
                         <resource>
-                             <directory>${basedir}/src/com/lespickup</directory>
-                             <includes>
-                                 <include></include>
-                             </includes>
-                        </resource>
-                        <resource>
                             <directory>${basedir}/web/WEB-INF</directory>
                             <filtering>true</filtering>
                             <targetPath>WEB-INF</targetPath>
