@@ -75,12 +75,30 @@
     <build>
         <finalName>lespickup</finalName>
         <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <source>1.10</source>
+                        <target>1.10</target>
+                        <compilerArgument>-Xlint:all</compilerArgument>
+                        <showWarnings>true</showWarnings>
+                        <showDeprecation>true</showDeprecation>
+                    </configuration>
+                </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <webResources>
+                        <resource>
+                             <directory>${basedir}/src/com/lespickup</directory>
+                             <includes>
+                                 <include></include>
+                             </includes>
+                        </resource>
                         <resource>
                             <directory>${basedir}/web/WEB-INF</directory>
                             <filtering>true</filtering>
