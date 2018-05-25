@@ -86,7 +86,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>appengine:devserver</goal>
+                            <goal>devserver</goal>
                         </goals>
                     </execution>
                 </executions>
