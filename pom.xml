@@ -94,11 +94,11 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <webResources>
                         <resource>
-                            <directory>${basedir}/web/WEB-INF</directory>
+                            <directory>${basedir}/web/</directory>
                             <filtering>true</filtering>
-                            <targetPath>WEB-INF</targetPath>
                             <includes>
-                                <include>*.xml</include>
+                                <include>*.jsp</include>
+                                <include>/WEB-INF/*</include>
                             </includes>
                         </resource>
                     </webResources>
