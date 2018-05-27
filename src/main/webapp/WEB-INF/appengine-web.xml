@@ -2,6 +2,6 @@
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
     <application>lespickupengine</application>
     <threadsafe>true</threadsafe>
-    <version>1.0.0</version>
+    <version>one</version>
     <runtime>java8</runtime>
 </appengine-web-app>
