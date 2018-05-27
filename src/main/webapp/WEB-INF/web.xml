@@ -10,17 +10,17 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>main-servlet.xml</param-value>
+        <param-value>WEB-INF/default-servlet.xml</param-value>
     </context-param>
 
         <servlet>
-            <servlet-name>main</servlet-name>
+            <servlet-name>default</servlet-name>
             <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
             <load-on-startup>1</load-on-startup>
         </servlet>
 
         <servlet-mapping>
-            <servlet-name>main</servlet-name>
+            <servlet-name>default</servlet-name>
             <url-pattern>/*</url-pattern>
         </servlet-mapping>
 
@@ -33,5 +33,6 @@
         <error-code>500</error-code>
         <location>/WEB-INF/views/error.jsp</location>
     </error-page>
+
 
 </web-app>
