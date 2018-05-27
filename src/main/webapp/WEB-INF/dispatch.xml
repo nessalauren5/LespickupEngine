@@ -12,7 +12,7 @@
     </dispatch>
     <dispatch>
         <!-- Send all work to the one static backend. -->
-        <url>*/api/*</url>
+        <url>*/*</url>
         <module>default</module>
     </dispatch>
 </dispatch-entries>

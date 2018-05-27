@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="resources/css/foundation.css">
-    <link rel="stylesheet" href="resources/css/app.css">
+    <link rel="stylesheet" href="../../resources/css/foundation.css">
+    <link rel="stylesheet" href="../../resources/css/app.css">
 </head>
 <body>
 <div class="grid-container">
@@ -163,9 +163,9 @@
     </div>
 </div>
 
-<script src="resources/js/vendor/jquery.js"></script>
-<script src="resources/js/vendor/what-input.js"></script>
-<script src="resources/js/vendor/foundation.js"></script>
-<script src="resources/js/app.js"></script>
+<script src="../../resources/js/vendor/jquery.js"></script>
+<script src="../../resources/js/vendor/what-input.js"></script>
+<script src="../../resources/js/vendor/foundation.js"></script>
+<script src="../../resources/js/app.js"></script>
 </body>
 </html>
