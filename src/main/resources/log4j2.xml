@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <appender name="rollingAppender" class="org.apache.log4j.DailyRollingFileAppender">
+            <param name="file" value="${catalina.home}/logs/lespickup.log"/>
+            <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+            <param name="MaxBackupIndex" value="31"/>
+            <param name="maxFileSize" value="10MB"/>
+            <layout class="org.apache.log4j.PatternLayout">
+                <param name="ConversionPattern" value="[%-5p] [%d] [%t] [%c] - %m%n"/>
+            </layout>
+        </appender>
+
+
+        <logger name="com.lespickup">
+            <AppenderRef ref="Console" />
+            <appender-ref ref="rollingAppender" />
+        </logger>
+
+        <logger name="org.springframework.core">
+            <level value="debug"/>
+        </logger>
+
+        <logger name="org.springframework.beans">
+            <level value="debug"/>
+        </logger>
+
+        <logger name="org.springframework.context">
+            <level value="debug"/>
+        </logger>
+        <Logger name="org.springframework" level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="rollingAppender"/>
+        </Logger>
+        <Logger name="org.springframework.web" level="debug">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="rollingAppender"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="rollingAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
