@@ -6,3 +6,5 @@ handlers:
   script: this field is required, but ignored
 - url: */*
   script: ignored
+
+service: default
