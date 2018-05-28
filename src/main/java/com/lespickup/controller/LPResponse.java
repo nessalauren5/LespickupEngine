@@ -2,7 +2,7 @@ package com.lespickup.controller;
 
 
 
-public class LPResponse{
+public class LPResponse {
 
     private String message;
 

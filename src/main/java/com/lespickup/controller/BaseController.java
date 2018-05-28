@@ -1,21 +1,28 @@
 package com.lespickup.controller;
 
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.apache.logging.log4j.*;
 
 @RestController
 @RequestMapping("/api")
+
 public class BaseController {
 
-    @GetMapping("persons")
-    public ResponseEntity <LPResponse> hello() {
+
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping("/")
+    public ResponseEntity<String> helloagain() {
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/persons")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<LPResponse> hello() {
         LPResponse lpr = new LPResponse("Hello Vanessa!");
-        return ResponseEntity.ok(lpr);
+        return ResponseEntity.ok().body(lpr);
     }
 
 }
