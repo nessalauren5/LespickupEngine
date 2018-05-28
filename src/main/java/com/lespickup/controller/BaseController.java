@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import com.google.appengine.spi.ServiceFactoryFactory;
 
 @RestController
 @RequestMapping("/api")
