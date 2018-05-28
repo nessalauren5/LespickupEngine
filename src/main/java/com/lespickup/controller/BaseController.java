@@ -20,16 +20,9 @@ public class BaseController {
         logger.log(Level.INFO,"inside helloagain");
         return ResponseEntity.ok().build();
     }
+    
 
     @GetMapping("/persons")
-    @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<LPResponse> hello() {
-        logger.log(Level.INFO,"inside hello");
-        LPResponse lpr = new LPResponse("Hello Vanessa!");
-        return ResponseEntity.ok().body(lpr);
-    }
-
-    @GetMapping("/persons/{name}")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<LPResponse> helloAgain(@RequestParam String name) {
         if (name != null && !name.isEmpty()) {
