@@ -29,4 +29,17 @@ public class BaseController {
         return ResponseEntity.ok().body(lpr);
     }
 
+    @GetMapping("/persons/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<LPResponse> helloAgain(@RequestParam String name) {
+        if (name != null && !name.isEmpty()) {
+            logger.log(Level.INFO, "Hello " + name);
+            LPResponse lpr = new LPResponse("Hello " + name);
+            return ResponseEntity.ok().body(lpr);
+        }
+        else {
+            LPResponse lpr = new LPResponse("Hello, no name given!");
+            return ResponseEntity.ok().body(lpr);
+        }
+    }
 }
