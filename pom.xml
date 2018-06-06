@@ -53,7 +53,7 @@
         <!-- https://mvnrepository.com/artifact/com.google.appengine/appengine -->
         <dependency>
             <groupId>com.google.appengine</groupId>
-            <artifactId>appengine</artifactId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
             <version>1.9.63</version>
             <type>pom</type>
         </dependency>
