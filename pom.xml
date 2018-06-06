@@ -56,7 +56,7 @@
             <artifactId>firebase-server-sdk</artifactId>
             <version>3.0.1</version>
         </dependency>
-        <!-- spring com.lespickup.security -->
+        <!-- spring com.lespickup.security
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
@@ -66,7 +66,7 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>5.0.5.RELEASE</version>
-        </dependency>
+        </dependency>-->
         <!-- https://mvnrepository.com/artifact/com.google.appengine/appengine -->
         <dependency>
             <groupId>com.google.appengine</groupId>
