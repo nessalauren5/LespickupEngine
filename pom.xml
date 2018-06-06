@@ -67,17 +67,6 @@
             <artifactId>spring-security-config</artifactId>
             <version>5.0.5.RELEASE</version>
         </dependency>
-        <!-- facebook -->
-        <dependency>
-            <groupId>org.springframework.social</groupId>
-            <artifactId>spring-social-facebook</artifactId>
-            <version>2.0.3.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.social</groupId>
-            <artifactId>spring-social-web</artifactId>
-            <version>1.1.4.RELEASE</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.appengine/appengine -->
         <dependency>
             <groupId>com.google.appengine</groupId>
