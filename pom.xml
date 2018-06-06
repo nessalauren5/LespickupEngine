@@ -55,8 +55,8 @@
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>
             <version>1.9.63</version>
-            <type>pom</type>
         </dependency>
+        
 
         <!--dependency>
             <groupId>org.apache.logging.log4j</groupId>

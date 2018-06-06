@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 @RequestMapping("/api")
 public class BaseController {
 
+
     private static final Logger logger = Logger.getLogger(BaseController.class.getName());
 
     @ResponseStatus(HttpStatus.OK)
