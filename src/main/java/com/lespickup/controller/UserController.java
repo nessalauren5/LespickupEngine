@@ -1,11 +1,9 @@
 package com.lespickup.controller;
 
 import com.lespickup.pojo.LPResponse;
-import com.lespickup.security.LPAuthenticationProvider;
 import com.lespickup.util.ParameterStringBuilder;
 import org.json.JSONObject;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
 import java.math.BigInteger;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
