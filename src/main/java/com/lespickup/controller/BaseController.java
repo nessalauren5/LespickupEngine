@@ -1,6 +1,7 @@
 package com.lespickup.controller;
 
 
+import com.lespickup.pojo.LPResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class BaseController {
         logger.log(Level.INFO,"inside helloagain");
         return ResponseEntity.ok().build();
     }
-    
+
 
     @GetMapping("/persons")
     @ResponseStatus(HttpStatus.OK)

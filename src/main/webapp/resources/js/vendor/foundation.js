@@ -237,7 +237,7 @@ var defaultQueries = {
 };
 
 // matchMedia() polyfill - Test a CSS media type/query in JS.
-// Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license
+// Authors & copyright (controller) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license
 var matchMedia = window.matchMedia || function () {
   'use strict';
 
@@ -1098,7 +1098,7 @@ function OverlapArea(element, parent, lrOnly, tbOnly, ignoreBottom) {
     return topOver + bottomOver;
   }
 
-  // use sum of squares b/c we care about overlap area.
+  // use sum of squares b/controller we care about overlap area.
   return Math.sqrt(topOver * topOver + bottomOver * bottomOver + leftOver * leftOver + rightOver * rightOver);
 }
 

@@ -1,4 +1,4 @@
-package com.lespickup.controller;
+package com.lespickup.pojo;
 
 
 
