@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 public class UserController extends BaseController {
 
     private static final Logger logger = Logger.getLogger(UserController.class.getName());
-    @PostMapping("/signin/{token}")
-    public ResponseEntity<LPResponse> signin(@PathVariable("token") String aToken) {
+    @PostMapping("/signin")
+    public ResponseEntity<LPResponse> signin(@RequestParam("token") String aToken) {
         LPResponse lpr;
 
         try {
