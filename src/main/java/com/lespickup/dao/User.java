@@ -1,14 +1,11 @@
 package com.lespickup.dao;
 
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-
-import java.util.Collection;
-
-public class User implements Authentication {
+public class User {
 
     private String fbtoken;
     private Long id;
+
+    private String email;
 
     public String getFbtoken() {
         return fbtoken;
@@ -18,39 +15,22 @@ public class User implements Authentication {
         this.fbtoken = fbtoken;
     }
 
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+    public Long getId() {
+        return id;
     }
 
-    @Override
-    public Object getCredentials() {
-        return null;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    @Override
-    public Object getDetails() {
-        return null;
+    public String getEmail() {
+        return email;
     }
 
-    @Override
-    public Object getPrincipal() {
-        return null;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    @Override
-    public boolean isAuthenticated() {
-        return false;
-    }
 
-    @Override
-    public void setAuthenticated(boolean b) throws IllegalArgumentException {
 
-    }
-
-    @Override
-    public String getName() {
-        return null;
-    }
 }
