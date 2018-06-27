@@ -3,28 +3,31 @@ package com.lespickup.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@RestController
-@RequestMapping("/api")
+@Controller
 public class BaseController {
 
 
     private static final Logger logger = Logger.getLogger(BaseController.class.getName());
 
-    @ResponseStatus(HttpStatus.OK)
-    @RequestMapping("/")
-    public ResponseEntity<String> helloagain() {
-        logger.log(Level.INFO,"inside helloagain");
-        return ResponseEntity.ok().build();
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView home(ModelMap model, HttpServletRequest request) {
+        ModelAndView mv = new ModelAndView();
+            mv.setViewName("index");
+            return mv;
     }
     
 
     @GetMapping("/persons")
-    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<LPResponse> helloAgain(@RequestParam String name) {
         if (name != null && !name.isEmpty()) {
             logger.log(Level.INFO, "Hello " + name);

@@ -3,9 +3,7 @@ package com.lespickup.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,10 +15,16 @@ public class UserController extends BaseController{
     private static final Logger logger = Logger.getLogger(UserController.class.getName());
 
 
-    @ResponseStatus(HttpStatus.OK)
-    @RequestMapping("/")
-    public ResponseEntity<String> helloagain() {
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public @ResponseBody LPResponse userhello() {
+        logger.log(Level.INFO,"inside user hello");
+        LPResponse resp = new LPResponse("hello!");
+        return resp;
+    }
+
+    @RequestMapping(value = "/goodbye", method = RequestMethod.GET)
+    public @ResponseBody ResponseEntity userdefault() {
         logger.log(Level.INFO,"inside user");
-        return ResponseEntity.ok().build();
+        return new ResponseEntity(HttpStatus.OK);
     }
 }

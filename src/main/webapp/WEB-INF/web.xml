@@ -8,31 +8,22 @@
             <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
         </listener>
 
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>WEB-INF/default-servlet.xml</param-value>
-    </context-param>
-
         <servlet>
-            <servlet-name>default</servlet-name>
+            <servlet-name>base</servlet-name>
             <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
             <load-on-startup>1</load-on-startup>
         </servlet>
 
         <servlet-mapping>
-            <servlet-name>default</servlet-name>
-            <url-pattern>/*</url-pattern>
+            <servlet-name>base</servlet-name>
+            <url-pattern>/</url-pattern>
         </servlet-mapping>
 
-    <error-page>
-        <error-code>404</error-code>
-        <location>/WEB-INF/views/error.jsp</location>
-    </error-page>
-
-    <error-page>
-        <error-code>500</error-code>
-        <location>/WEB-INF/views/error.jsp</location>
-    </error-page>
-
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            WEB-INF/appcontext.xml
+        </param-value>
+    </context-param>
 
 </web-app>
